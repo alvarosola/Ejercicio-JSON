@@ -4,7 +4,6 @@
 #Ejercicio-JSON
 #ÁLVARO SOLA OLIVERO
 
-
 #1 - Lista todos los accidentes.
 
 import json
