@@ -14,7 +14,7 @@ with open("accidente.json") as fichero:
 print "Lista de accidentes:"
 print "--------------------------------"
 
-for x in datos["result"]["vehiculo"]:
+for x in datos["result"]:
 	print x["type"]
 
 print "--------------------------------"
@@ -28,6 +28,8 @@ print "Total de accidentes:",contador
 print "--------------------------------"
 
 #3 - Pide por teclado un vehiculo y muestra cual es el tipo de accidente.
+
+pregunta=raw_input("Introduzca un vehiculo:")
 
 #4 - Introduzca una fecha inicial y una fecha final y muestra los accidentes producidos en ese intervalo.
 
