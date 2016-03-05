@@ -1,6 +1,6 @@
 # Ejercicio-JSON
 
-1 - Lista todos los vehiculos afectados en los accidentes.
+1 - Lista todos los accidentes.
 
 2 - Muestra el número de accidentes.
 
