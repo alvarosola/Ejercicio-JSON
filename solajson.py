@@ -39,12 +39,10 @@ lista1=[]
 fech_ini=raw_input("Introduzca una fecha inicial (año-mes-dia):")
 fech_fin=raw_input("Introduzca una fecha final (año-mes-dia):")
 
-
-
 #5 - Introduce por teclado una cadena, si esta dentro de algún comentario, muestra el comentario del accidente, sino devuelve un error. 
 
 pregunta1=raw_input("Introduce una cadena:")
 
 for cadena in datos["result"]:
-	if pregunta1 in cadena["comments"]:
-		print cadena["comments"]
+	if pregunta1 in cadena["reason"]:
+		print cadena["reason"]
