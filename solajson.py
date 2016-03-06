@@ -32,8 +32,13 @@ print "--------------------------------"
 
 pregunta=raw_input("Introduzca un vehiculo:")
 
-for tipo in datos["result"]["vehiculo"]:
-	if pregunta in tipo["type"]:
+#diccionario={}
+#for l in datos:
+#	codigo=l.split(",")
+#	diccionario["dicc"]=codigo["result"]["type"]
+
+for tipo in datos["result"]:
+	if pregunta in tipo["vehiculo"]["type"]:
 		print "Tipo de accidentes dentro de este vehículo:",tipo["type"]
 
 print "----------------------------------------------------"
