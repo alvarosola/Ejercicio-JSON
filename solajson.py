@@ -30,21 +30,24 @@ print "--------------------------------"
 
 #3 - Pide por teclado un vehiculo y muestra cual es el tipo de accidente.
 
-lista=[]
 pregunta=raw_input("Introduzca un vehiculo:")
 
-lista
+for tipo in datos["result"]["vehiculo"]:
+	if pregunta in tipo["type"]:
+		print "Tipo de accidentes dentro de este vehículo:",tipo["type"]
+
+print "----------------------------------------------------"
 
 #4 - Introduzca una fecha inicial y una fecha final y muestra los accidentes producidos en ese intervalo.
 
 #formato="%y-%m-%d"
 
-fech_ini=raw_input("Introduzca una fecha inicial (AAAA-MM-DD):")
+fech_ini=raw_input("Introduzca una fecha inicial (AAAA-MM-DD), ejemplo(2013-12-20):")
 
 if fech_ini=="":
 	print "Error, introduzca valor como se pide."
 
-fech_fin=raw_input("Introduzca una fecha final (AAAA-MM-DD):")
+fech_fin=raw_input("Introduzca una fecha final (AAAA-MM-DD), ejemplo(2013-12-25):")
 		
 if fech_fin=="":
 	print "Error, introduzca valor como se pide."
