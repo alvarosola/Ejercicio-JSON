@@ -37,13 +37,17 @@ lista
 
 #4 - Introduzca una fecha inicial y una fecha final y muestra los accidentes producidos en ese intervalo.
 
-fech_ini=raw_input("Introduzca una fecha inicial (XXXX-MM-DD):")
-#if fech_ini=="":
-#	break
+#formato="%y-%m-%d"
 
-fech_fin=raw_input("Introduzca una fecha final (XXXX-MM-DD):")
-#if fech_fin=="":
-#	break
+fech_ini=raw_input("Introduzca una fecha inicial (AAAA-MM-DD):")
+
+if fech_ini=="":
+	print "Error, introduzca valor como se pide."
+
+fech_fin=raw_input("Introduzca una fecha final (AAAA-MM-DD):")
+		
+if fech_fin=="":
+	print "Error, introduzca valor como se pide."
 
 if fech_fin>=fech_ini:
    	for accidente in datos["result"]:
@@ -53,6 +57,8 @@ if fech_fin>=fech_ini:
 else:
    	print "La fecha final debe ser mayor o igual que la inicial"
 
+print "----------------------------------------------------"
+
 #5 - Introduce por teclado una cadena, si esta dentro de la razón del accidente, muestra la razón del accidente, sino devuelve un error.
 
 pregunta1=raw_input("Introduce una cadena:")
@@ -61,6 +67,3 @@ print "La siguiente cadena aparece en las siguientes razones de accidentes:"
 for cadena in datos["result"]:
 	if pregunta1 in cadena["reason"]:
 		print cadena["reason"]
-	else:
-		print "Error, esa cadena no esta dentro de una raón de accidentes."
-		break
