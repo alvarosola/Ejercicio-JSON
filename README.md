@@ -8,4 +8,4 @@
 
 4 - Introduzca una fecha inicial y una fecha final y muestra los accidentes producidos en ese intervalo.
 
-5 - Introduce por teclado una cadena, si esta dentro de la razon del accidente, muestra el comentario del accidente, sino devuelve un error. 
+5 - Introduce por teclado una cadena, si esta dentro de la razón del accidente, muestra la razón del accidente, sino devuelve un error. 
