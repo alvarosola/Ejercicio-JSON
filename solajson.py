@@ -66,8 +66,11 @@ print "----------------------------------------------------"
 #5 - Introduce por teclado una cadena, si esta dentro de la razón del accidente, muestra la razón del accidente, sino devuelve un error.
 
 pregunta1=raw_input("Introduce una cadena:")
-print "La siguiente cadena aparece en las siguientes razones de accidentes:"
+print "La siguiente cadena",pregunta1,"aparece en las siguientes razones de accidentes:"
 
-for cadena in datos["result"]:
-	if pregunta1 in cadena["reason"]:
-		print cadena["reason"]
+if pregunta1!="":
+	for cadena in datos["result"]:
+		if pregunta1.lower() in cadena["reason"].lower():
+			print cadena["reason"]
+else:
+	print "Error."
