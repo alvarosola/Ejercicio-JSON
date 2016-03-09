@@ -7,6 +7,10 @@
 import json
 from datetime import datetime
 
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 with open("accidente.json") as fichero:
 	datos = json.load(fichero)
 
@@ -74,3 +78,23 @@ if pregunta1!="":
 			print cadena["reason"]
 else:
 	print "Error."
+
+#6- Ejercicio de Jose Domingo
+
+fich="accidente.html"
+archivo=open(fich,"w")
+for elemento in datos["result"]:
+	tipo=elemento["type"]
+	razon=elemento["reason"]
+
+	for lista in elemento["afectado"]:
+		ano=lista["age"]
+		estado=lista["status"]
+			
+	archivo.write("<h1>"+str(tipo)+"</h1>")
+	archivo.write("<p>"+str(razon)+"</p>")
+	archivo.write("<ul>")
+	archivo.write("<li>"+str(ano)+"</li>")
+	archivo.write("<li>"+str(estado)+"</li>")
+	archivo.write("</ul>")
+archivo.close()
